@@ -4,200 +4,225 @@
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
+ <?php $this->load->view('plantilla/head') ?>
+ <!-- BEGIN PAGE LEVEL STYLES -->
+ <link href="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
+ <!-- END PAGE LEVEL STYLES -->
 
-<meta charset="utf-8"/>
-<title>Admin Ave</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta content="" name="description"/>
-<meta content="" name="author"/>
-<link rel="shortcut icon" href="<?php echo site_url('') ?>favicon.ico"/>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
-    <!-- END PAGE LEVEL STYLES -->
-    <!-- BEGIN THEME STYLES -->
-    <link href="<?php echo site_url('') ?>metronic/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/global/css/plugins.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
-    <link id="style_color" href="<?php echo site_url('') ?>metronic/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo site_url('') ?>metronic/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+ <!-- BEGIN PAGE DATEPICKER -->
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/clockface/css/clockface.css"/>
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css"/>
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-colorpicker/css/colorpicker.css"/>
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+ <link rel="stylesheet" type="text/css" href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+ <!-- END FIN PAGE DATEPICKER -->
 </head>
 
-<body class="page-header-fixed page-quick-sidebar-over-content ">
-    <!-- BEGIN HEADER -->
-    <div class="page-header -i navbar navbar-fixed-top">
-        <!-- BEGIN HEADER INNER -->
-        <div class="page-header-inner">
-            <!-- BEGIN LOGO -->
-            <div class="page-logo">
-                <a href="<?php echo site_url('') ?>solicitudes">
-                    <img src="<?php echo site_url('') ?>metronic/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
-                </a>
+<body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed page-sidebar-closed-hide-logo page-container-bg-solid">
+  <!-- BEGIN HEADER -->
+  <div class="page-header -i navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <?php echo $barra; ?>
+    <!-- END HEADER INNER -->
+  </div>
+  <!-- END HEADER -->
+  <div class="clearfix">
+  </div>
+  <!-- BEGIN CONTAINER -->
+  <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <?php echo $menu; ?>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+      <div class="page-content">
 
 
+        <div class="row margin-top-5">
+          <div class="col-md-12">
+            <!-- BEGIN PROFILE SIDEBAR -->
+            <div class="profile-sidebar">
+              <!-- PORTLET MAIN -->
+              <div class="portlet light profile-sidebar-portlet">
+                <!-- SIDEBAR USERPIC -->
+
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                  <div class="profile-usertitle-name">
+                   Profesionales
+                 </div>
+
+                 <form role="form"  class="form-horizontal">
+
+
+
+
+                  <div class="md-radio-list">
+
+                    <div class="form-group">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-8">
+                       <div class="md-radio has-error">
+                        <input type="radio" id="radio10" name="radio1" class="md-radiobtn" checked="">
+                        <label for="radio10">
+                          <span></span>
+                          <span class="check"></span>
+                          <span class="box"></span>
+                          Dr. Eduardo Padilla Cruz </label>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-8">
+                       <div class="md-radio has-error">
+                        <input type="radio" id="radio11" name="radio1" class="md-radiobtn">
+                        <label for="radio11">
+                          <span></span>
+                          <span class="check"></span>
+                          <span class="box"></span>
+                          <p>Dr. Eduardo Padilla Cruz</p> </label>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+                  </div>
+
+                </form>
+              </div>
+              <!-- END SIDEBAR USER TITLE -->
+              
+
+              <!-- END MENU -->
             </div>
+            <!-- END PORTLET MAIN -->
+            <!-- PORTLET MAIN -->
+            <div class="portlet light">
+              <!-- STAT -->
+              <div class="profile-usertitle-name">
+                Clasificación
+              </div><br>
 
+              <span class="label" style="background-color: #F3565D">
+                <i class="fa fa-times-circle"></i> No confirmado </span><hr/>
+                <span class="label" style="background-color:#69A4E0">
+                  <i class="fa fa-check-square"></i> Confirmado </span><hr/>
+                  <span class="label" style="background-color:#F8CB00">
+                   <i class="fa fa-history"></i> Hora cancelada </span><hr/>
+                   <span class="label" style="background-color:#1BBC9B">
+                    <i class="fa fa-envelope"></i> Confirmado por mail </span><hr/>
+                    <span class="label" style="background-color:#9B59B6">
+                     <i class="fa fa-envelope-o"></i> Cancelado por mail </span><hr/>
+                     <!-- END STAT -->
 
+                   </div>
 
-            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-            </a>
-            <!-- END RESPONSIVE MENU TOGGLER -->
-            <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu">
-                <ul class="nav navbar-nav pull-right">
-
-
-                    <!-- END TODO DROPDOWN -->
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-user">
-                            <div class="dropdown-toggle">
-                                <img alt="" class="img-circle" src="<?php echo site_url('') ?>metronic/admin/layout/img/avatar3_small.jpg"/>
-
-                                <span class="username username-hide-on-mobile">
-                                    ¡Hola! <?php echo $nombre ?> ( <?php echo $puesto ?>) </span>
-                            
-                            </div>
-                           
-                        </li>
-                        <li class="dropdown dropdown-user" >
-                        <a href="<?php echo site_url('') ?>menu" class="dropdown-toggle">
-                                <i class="fa fa-bars"></i> <span class="username username-hide-on-mobile"> MENÚ</span>
-                            </a>
-                           
-
-                        </li>
-                        <li class="dropdown dropdown-user" >
-                        <a href="<?php echo site_url('') ?>salir/close" class="dropdown-toggle">
-                                <i class="icon-logout"></i> <span class="username username-hide-on-mobile"> SALIR</span>
-                            </a>
-                           
-
-                        </li>
-                                <!-- END QUICK SIDEBAR TOGGLER -->
-                            </ul>
+                   <div class="portlet light">
+                    <div class="date-picker" data-date-format="mm/dd/yyyy">
+                    </div>
+                  </div>
+                  <!-- END PORTLET MAIN -->
+                </div>
+                <!-- END BEGIN PROFILE SIDEBAR -->
+                <!-- BEGIN PROFILE CONTENT -->
+                <div class="profile-content">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="portlet box green-meadow calendar">
+                        <div class="portlet-title">
+                          <div class="caption">
+                            <i class="fa fa-gift"></i>Calendario
+                          </div>
                         </div>
-                        <!-- END TOP NAVIGATION MENU -->
-                    </div>
-                    <!-- END HEADER INNER -->
-                </div>
-                <!-- END HEADER -->
-                <div class="clearfix">
-                </div>
-                <!-- BEGIN CONTAINER -->
-                <div class="page-container">
+                        <div class="portlet-body">
+                          <div class="row">
 
-
-                    <?php echo $menu; ?>
-
-
-                    <!-- END SIDEBAR -->
-                    <!-- BEGIN CONTENT -->
-                    <div class="page-content-wrapper">
-                        <div class="page-content">
-
-
-                            <!-- END PAGE HEADER-->
-                            <!-- BEGIN PAGE CONTENT-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="portlet box green-meadow calendar">
-                                        <div class="portlet-title">
-                                            <div class="caption">
-                                                <i class="fa fa-gift"></i>Agenda de Inspección
-                                            </div>
-                                        </div>
-                                        <div class="portlet-body">
-                                            <div class="row">
-
-                                                <div class="col-md-12 col-sm-12">
-                                                    <div id="calendar" class="has-toolbar">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END CALENDAR PORTLET-->
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-md-12 col-sm-12">
+                              <div id="calendar" class="has-toolbar">
+                              </div>
                             </div>
-
-                            <!-- END PAGE CONTENT-->
+                          </div>
+                          <!-- END CALENDAR PORTLET-->
                         </div>
+                      </div>
                     </div>
-                    <!-- END CONTENT -->
+
+
+
+                  </div>
+
+
 
                 </div>
-                <!-- END CONTAINER -->
-                <!-- BEGIN FOOTER -->
-                <div class="page-footer">
-                    <div class="page-footer-inner">
-                        2016 &copy; HelpMex.com.mx
-                    </div>
-                    <div class="scroll-to-top">
-                        <i class="icon-arrow-up"></i>
-                    </div>
-                </div>
+                <!-- END PROFILE CONTENT -->
+              </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+          </div>
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
 
+        <!-- END QUICK SIDEBAR -->
+      </div>
+      <!-- END CONTAINER -->
+      <!-- BEGIN FOOTER -->
+      <div class="page-footer">
+        <div class="page-footer-inner">
+         2014 &copy; Metronic by keenthemes.
+       </div>
+       <div class="scroll-to-top">
+        <i class="icon-arrow-up"></i>
+      </div>
+    </div>
 
+    <?php $this->load->view('plantilla/script') ?>
+    <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
+    <script src="<?php echo site_url('') ?>metronic/global/plugins/moment.min.js"></script>
+    <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/calendar.js"></script>
+    <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/lang/es.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
 
-
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-                <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-                <!-- END CORE PLUGINS -->
-                <!-- BEGIN PAGE LEVEL PLUGINS -->
-                <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/moment.min.js"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.js"></script>
-                <!-- END PAGE LEVEL PLUGINS -->
-                <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                <script src="<?php echo site_url('') ?>metronic/global/scripts/metronic.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/admin/layout/scripts/layout.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/admin/layout/scripts/demo.js" type="text/javascript"></script>
-                <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/lang/es.js" type="text/javascript"></script>
-
-                <script>
-
-                    <?php echo $scriptinicial; ?>
-
-                </script>
-                <script>
-                    jQuery(document).ready(function() {  
-
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/clockface/js/clockface.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/components-pickers.js"></script>
+    <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" type="text/javascript"></script>
+    <script>
+      jQuery(document).ready(function() {       
    // initiate layout and plugins
    Metronic.init(); // init metronic core components
 Layout.init(); // init current layout
 QuickSidebar.init(); // init quick sidebar
 Demo.init(); // init demo features
-cargardatos();
+//Profile.init(); // init page demo
+Calendar.init();
+
+ComponentsPickers.init();
+$.datepicker.setDefaults($.datepicker.regional['es']);
 
 });
-                    
-             </script>
+</script>
 
 
-
-
-
-
-
-         </body>
-         <!-- END BODY -->
-         </html>
+</body>
+<!-- END BODY -->
+</html>

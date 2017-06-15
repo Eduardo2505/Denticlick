@@ -88,12 +88,12 @@ var Calendar = function() {
 
             //predefined events
             $('#event_box').html("");
-            addEvent("My Event 1");
-            addEvent("My Event 2");
-            addEvent("My Event 3");
-            addEvent("My Event 4");
-            addEvent("My Event 5");
-            addEvent("My Event 6");
+            addEvent("Cita 1");
+            addEvent("Cita 2");
+            addEvent("Cita 3");
+            addEvent("Cita 4");
+            addEvent("Cita 5");
+            addEvent("Cita 6");
 
             $('#calendar').fullCalendar('destroy'); // destroy the calendar
             $('#calendar').fullCalendar({ //re-initialize the calendar
@@ -125,42 +125,42 @@ var Calendar = function() {
                     }
                 },
                 events: [{
-                    title: 'All Day Event',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, 1),
                     backgroundColor: Metronic.getBrandColor('yellow')
                 }, {
-                    title: 'Long Event',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d - 5),
                     end: new Date(y, m, d - 2),
                     backgroundColor: Metronic.getBrandColor('green')
                 }, {
-                    title: 'Repeating Event',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d - 3, 16, 0),
                     allDay: false,
                     backgroundColor: Metronic.getBrandColor('red')
                 }, {
-                    title: 'Repeating Event',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d + 4, 16, 0),
                     allDay: false,
                     backgroundColor: Metronic.getBrandColor('green')
                 }, {
-                    title: 'Meeting',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d, 10, 30),
                     allDay: false,
                 }, {
-                    title: 'Lunch',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d, 12, 0),
                     end: new Date(y, m, d, 14, 0),
                     backgroundColor: Metronic.getBrandColor('grey'),
                     allDay: false,
                 }, {
-                    title: 'Birthday Party',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, d + 1, 19, 0),
                     end: new Date(y, m, d + 1, 22, 30),
                     backgroundColor: Metronic.getBrandColor('purple'),
                     allDay: false,
                 }, {
-                    title: 'Click for Google',
+                    title: '8 am Eduardo',
                     start: new Date(y, m, 28),
                     end: new Date(y, m, 29),
                     backgroundColor: Metronic.getBrandColor('yellow'),
