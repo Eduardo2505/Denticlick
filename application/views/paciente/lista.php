@@ -30,6 +30,9 @@
             <div class="page-content">
 
                 <!-- END PAGE HEADER-->
+                <h3 class="page-title">
+                    Pacientes <small> Catálogo de clientes</small>
+                </h3>
                 <!-- BEGIN PAGE CONTENT-->
 
 
@@ -37,31 +40,42 @@
 
                     <div class="col-md-12">
 
-                    <div class="row search-form-default">
-                                <div class="col-md-12">
-                                    <form action="<?php echo site_url('') ?>avaluos/mostrar">
-                                        <div class="input-group">
-                                            <div class="input-cont">
-                                                <div class="col-md-4">
-                                                    <input type="text" name="nombre" class="form-control" placeholder="Avalúo" maxlength="45">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <input type="text" name="empleado" class="form-control" placeholder="Nombre Empleado" maxlength="45">
-                                                </div>
+                        <div class="row search-form-default">
+                            <div class="col-md-12">
+                                <form action="<?php echo site_url('') ?>avaluos/mostrar">
+                                    <div class="input-group">
+                                        <div class="input-cont">
+                                            <div class="col-md-4">
+                                                <input type="text" name="nombre" class="form-control" placeholder="Nombre .." maxlength="45">
                                             </div>
+                                            <div class="col-md-4">
+                                                <input type="text" name="empleado" class="form-control" placeholder="Profesional.." maxlength="45">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="text" name="empleado" class="form-control" placeholder="Palabra Clave .." maxlength="45">
+                                            </div>
+                                        </div>
 
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn green-haze">
-                                                    Buscar &nbsp; <i class="m-icon-swapright m-icon-white"></i>
-                                                </button>
+                                        <span class="input-group-btn">
+
+                                            <button type="submit" class="btn green-haze">
+                                                Buscar &nbsp; <i class="m-icon-swapright m-icon-white"></i>
+                                            </button>
+                                        </span>
+                                        &nbsp;
+                                        <span class="input-group-btn">   
+                                            <a href="<?php echo site_url('') ?>demo/paciente" class="btn blue">
+                                                <i class="fa fa-times"></i> Nuevo Paciente </a>
                                             </span>
+
                                         </div>
                                     </form>
-                                </div>
+                                </br>
                             </div>
+                        </div>
 
 
-                        
+
                         <div class="tabbable-line boxless tabbable-reversed">
 
                             <div class="tab-content">
