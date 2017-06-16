@@ -20,7 +20,7 @@
           <!-- END RESPONSIVE QUICK SEARCH FORM -->
         </li>
 
-         <li  class="start active">
+         <li  class="<?php  if(!empty($agenda)) {echo $agenda; }?>">
 
             <a href="<?php echo site_url('') ?>demo">
                 <i class="fa fa-calendar"></i>
@@ -30,11 +30,22 @@
             </a>
 
         </li>
+
+        <li  class="<?php  if(!empty($paciente)) {echo $paciente; }?>">
+
+            <a href="<?php echo site_url('') ?>demo/pacienteLista">
+                <i class="fa fa fa-child"></i>
+                <span class="title">Paciente</span>
+                <span class="selected"></span>
+
+            </a>
+
+        </li>
        
         <li>
           <a href="javascript:;">
           <i class="icon-basket"></i>
-          <span class="title">eCommerce</span>
+          <span class="title">Paciente</span>
           <span class="arrow "></span>
           </a>
           <ul class="sub-menu">

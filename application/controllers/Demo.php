@@ -14,12 +14,24 @@ class Demo extends CI_Controller {
 
     public function index() {
 
-        $datam['agenda'] = "start active open";
-        $datam['agendex'] = "x";
+        $datam['agenda'] = "start active";
+        $datam['paciente'] = "x";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
         $datab['agendex'] = "x";
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('calendario', $data);
+    }
+    public function pacienteLista() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('paciente/lista', $data);
     }
 
 
