@@ -41,18 +41,39 @@
             </a>
 
         </li>
+
+        <li  class="<?php  if(!empty($reportes)) {echo $reportes; }?>">
+
+            <a href="<?php echo site_url('') ?>demo/pacienteLista">
+                <i class="fa fa-cubes"></i>
+                <span class="title">Reportes</span>
+                <span class="selected"></span>
+
+            </a>
+
+        </li>
        
         <li>
           <a href="javascript:;">
-          <i class="icon-basket"></i>
-          <span class="title">Paciente</span>
+          <i class="fa fa-cogs"></i>
+          <span class="title">Administración</span>
           <span class="arrow "></span>
           </a>
           <ul class="sub-menu">
             <li>
               <a href="ecommerce_index.html">
+              <i class="fa fa-user"></i>
+              Profesionales</a>
+            </li>
+            <li>
+              <a href="ecommerce_index.html">
               <i class="icon-home"></i>
-              Dashboard</a>
+              Empresa</a>
+            </li>
+             <li>
+              <a href="ecommerce_index.html">
+              <i class="fa fa-calendar"></i>
+              Agenda</a>
             </li>
           
           </ul>

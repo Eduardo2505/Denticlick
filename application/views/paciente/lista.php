@@ -115,7 +115,7 @@
                                                         <td>Alérgico a medicamento</td>
                                                         <td>Dra. Maria José </td>
                                                         <td>
-                                                            <a href="javascript:;" title="Ficha" class="btn btn-sm input-circle blue">
+                                                            <a href="<?php echo site_url('') ?>demo/ficha" title="Ficha" class="btn btn-sm input-circle blue">
                                                                 <i class="fa fa-user"></i>
                                                             </a>
                                                             <a href="javascript:;" title="Evolución/Historial" class="btn input-circle btn-sm yellow-crusta">
