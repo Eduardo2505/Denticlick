@@ -79,264 +79,264 @@
                     <!-- END TODO DROPDOWN -->
                     <!-- BEGIN USER LOGIN DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                     <li class="dropdown dropdown-user">
-                            <div class="dropdown-toggle">
-                                <img alt="" class="img-circle" src="<?php echo site_url('') ?>metronic/admin/layout/img/avatar3_small.jpg"/>
+                    <li class="dropdown dropdown-user">
+                        <div class="dropdown-toggle">
+                            <img alt="" class="img-circle" src="<?php echo site_url('') ?>metronic/admin/layout/img/avatar3_small.jpg"/>
 
-                                <span class="username username-hide-on-mobile">
-                                    ¡Hola! <?php echo $nombre ?> ( <?php echo $puesto ?>) </span>
-                            
+                            <span class="username username-hide-on-mobile">
+                                ¡Hola! <?php echo $nombre ?> ( <?php echo $puesto ?>) </span>
+                                
                             </div>
-                           
+                            
                         </li>
                         <li class="dropdown dropdown-user" >
-                        <a href="<?php echo site_url('') ?>menu" class="dropdown-toggle">
+                            <a href="<?php echo site_url('') ?>menu" class="dropdown-toggle">
                                 <i class="fa fa-bars"></i> <span class="username username-hide-on-mobile"> MENÚ</span>
                             </a>
-                           
+                            
 
                         </li>
                         <li class="dropdown dropdown-user" >
-                        <a href="<?php echo site_url('') ?>salir/close" class="dropdown-toggle">
+                            <a href="<?php echo site_url('') ?>salir/close" class="dropdown-toggle">
                                 <i class="icon-logout"></i> <span class="username username-hide-on-mobile"> SALIR</span>
                             </a>
-                           
+                            
 
                         </li>
-                                <!-- END QUICK SIDEBAR TOGGLER -->
-                            </ul>
-                        </div>
-                        <!-- END TOP NAVIGATION MENU -->
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <div class="clearfix">
+        </div>
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+
+
+            <?php echo $menu; ?>
+
+
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+
+
+
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="<?php echo site_url('') ?>empleado/mostrar">MOSTRAR</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+
+                        </ul>
+
                     </div>
-                    <!-- END HEADER INNER -->
-                </div>
-                <!-- END HEADER -->
-                <div class="clearfix">
-                </div>
-                <!-- BEGIN CONTAINER -->
-                <div class="page-container">
+                    <!-- END PAGE HEADER-->
+                    <!-- BEGIN PAGE CONTENT-->
 
 
-                    <?php echo $menu; ?>
+                    <div class="row">
 
+                        <div class="col-md-12">
 
-                    <!-- END SIDEBAR -->
-                    <!-- BEGIN CONTENT -->
-                    <div class="page-content-wrapper">
-                        <div class="page-content">
-
-
-
-                            <div class="page-bar">
-                                <ul class="page-breadcrumb">
-                                    <li>
-                                        <i class="fa fa-home"></i>
-                                        <a href="<?php echo site_url('') ?>empleado/mostrar">MOSTRAR</a>
-                                        <i class="fa fa-angle-right"></i>
-                                    </li>
-
-                                </ul>
+                            <?php if ($msn == 1) { ?>
+                            <div class="alert alert-block alert-success fade in">
+                                <button type="button" class="close" data-dismiss="alert"></button>
+                                <h3 class="alert-heading">Nuevo registro</h3>
+                                <p>
+                                    Se registro correctamente!
+                                </p>
 
                             </div>
-                            <!-- END PAGE HEADER-->
-                            <!-- BEGIN PAGE CONTENT-->
+                            <?php } else if ($msn == 0) { ?>    
+
+                            <div class="alert alert-block alert-danger fade in">
+                                <button type="button" class="close" data-dismiss="alert"></button>
+                                <h3 class="alert-heading">¡Error!</h3>
+                                <p>
+                                    Compruebe los datos
+                                </p>
+
+                            </div>
+                            <?php } ?>
+
+                            <div class="tabbable-line boxless tabbable-reversed">
+
+                                <div class="tab-content">
 
 
-                            <div class="row">
+                                    <div class="portlet box blue">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <i class="fa fa-gift"></i>REGISTRO EMPLEADO
+                                            </div>
 
-                                <div class="col-md-12">
+                                        </div>
+                                        <div class="portlet-body form">
+                                            <!-- BEGIN FORM-->
+                                            <form action="<?php echo site_url('') ?>empleado/registro" method="POST"   class="form-horizontal">
+                                                <div class="form-body">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">NOMBRE: *</label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control input-circle" maxlength="45" name="Nombre" placeholder="Nombre" required="">
 
-                                    <?php if ($msn == 1) { ?>
-                                    <div class="alert alert-block alert-success fade in">
-                                        <button type="button" class="close" data-dismiss="alert"></button>
-                                        <h3 class="alert-heading">Nuevo registro</h3>
-                                        <p>
-                                            Se registro correctamente!
-                                        </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">APELLIDOS: *</label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control input-circle" maxlength="45" name="apellidos" placeholder="Apellidos" required="">
 
-                                    </div>
-                                    <?php } else if ($msn == 0) { ?>    
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">INICIALES: *</label>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control input-circle"  maxlength="45" name="iniciales" placeholder="INICIALES">
 
-                                    <div class="alert alert-block alert-danger fade in">
-                                        <button type="button" class="close" data-dismiss="alert"></button>
-                                        <h3 class="alert-heading">¡Error!</h3>
-                                        <p>
-                                            Compruebe los datos
-                                        </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">EMAIL: *</label>
+                                                        <div class="col-md-4">
+                                                            <input type="email" class="form-control input-circle"  maxlength="45" name="email" placeholder="EMAIL">
 
-                                    </div>
-                                    <?php } ?>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">ESTADO: *</label>
+                                                        <div class="col-md-4">
 
-                                    <div class="tabbable-line boxless tabbable-reversed">
+                                                            <select class="form-control input-circle" required="" name="estado">
+                                                                <option value="1">Activo</option>
+                                                                <option value="0">Inactivo</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">EMPRESA: *</label>
+                                                        <div class="col-md-4">
 
-                                        <div class="tab-content">
+                                                            <select class="form-control input-circle" required="" name="idempresa">
+                                                                <option value="">Seleccione</option>
+
+                                                                <?php
+                                                                if (isset($empresas)) {
+                                                                    foreach ($empresas->result() as $rowx) {
+                                                                        ?>
+
+                                                                        <option value="<?php echo $rowx->idempresa; ?>"><?php echo $rowx->nombre; ?></option>
 
 
-                                            <div class="portlet box blue">
-                                                <div class="portlet-title">
-                                                    <div class="caption">
-                                                        <i class="fa fa-gift"></i>REGISTRO EMPLEADO
+
+                                                                        <?php
+                                                                    }
+                                                                }
+                                                                ?>  
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">Color: *</label>
+                                                        <div class="col-md-4">
+                                                            <div id="colorSelector"><div style="background-color: #c91e6e"></div></div>
+                                                            <input type="hidden" id="colorNuevo" name="color" value="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label">PUESTO: *</label>
+                                                        <div class="col-md-4">
+                                                            <?php
+                                                            if (isset($puestox)) {
+                                                                foreach ($puestox->result() as $rowx) {
+                                                                    ?>
+
+                                                                    <div class="checkbox-inline">
+                                                                        <input type="checkbox" value="<?php echo $rowx->idcat_puesto; ?>" name="numero[]"> <?php echo $rowx->puesto; ?>
+                                                                    </div>
+
+
+
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>  
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions">
+                                                        <div class="row">
+                                                            <div class="col-md-offset-3 col-md-9">
+                                                                <button type="submit" class="btn btn-circle blue">GUARDAR</button>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
 
                                                 </div>
-                                                <div class="portlet-body form">
-                                                    <!-- BEGIN FORM-->
-                                                    <form action="<?php echo site_url('') ?>empleado/registro" method="POST"   class="form-horizontal">
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">NOMBRE: *</label>
-                                                                <div class="col-md-4">
-                                                                    <input type="text" class="form-control input-circle" maxlength="45" name="Nombre" placeholder="Nombre" required="">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">APELLIDOS: *</label>
-                                                                <div class="col-md-4">
-                                                                    <input type="text" class="form-control input-circle" maxlength="45" name="apellidos" placeholder="Apellidos" required="">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">INICIALES: *</label>
-                                                                <div class="col-md-4">
-                                                                    <input type="text" class="form-control input-circle"  maxlength="45" name="iniciales" placeholder="INICIALES">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">EMAIL: *</label>
-                                                                <div class="col-md-4">
-                                                                    <input type="email" class="form-control input-circle"  maxlength="45" name="email" placeholder="EMAIL">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">ESTADO: *</label>
-                                                                <div class="col-md-4">
-
-                                                                    <select class="form-control input-circle" required="" name="estado">
-                                                                        <option value="1">Activo</option>
-                                                                        <option value="0">Inactivo</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">EMPRESA: *</label>
-                                                                <div class="col-md-4">
-
-                                                                    <select class="form-control input-circle" required="" name="idempresa">
-                                                                        <option value="">Seleccione</option>
-
-                                                                        <?php
-                                                                        if (isset($empresas)) {
-                                                                            foreach ($empresas->result() as $rowx) {
-                                                                                ?>
-
-                                                                                <option value="<?php echo $rowx->idempresa; ?>"><?php echo $rowx->nombre; ?></option>
-
-
-
-                                                                                <?php
-                                                                            }
-                                                                        }
-                                                                        ?>  
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">Color: *</label>
-                                                                <div class="col-md-4">
-                                                                    <div id="colorSelector"><div style="background-color: #c91e6e"></div></div>
-                                                                    <input type="hidden" id="colorNuevo" name="color" value="">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-3 control-label">PUESTO: *</label>
-                                                                <div class="col-md-4">
-                                                                    <?php
-                                                                    if (isset($puestox)) {
-                                                                        foreach ($puestox->result() as $rowx) {
-                                                                            ?>
-
-                                                                            <div class="checkbox-inline">
-                                                                                <input type="checkbox" value="<?php echo $rowx->idcat_puesto; ?>" name="numero[]"> <?php echo $rowx->puesto; ?>
-                                                                            </div>
-
-
-
-                                                                            <?php
-                                                                        }
-                                                                    }
-                                                                    ?>  
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-actions">
-                                                                <div class="row">
-                                                                    <div class="col-md-offset-3 col-md-9">
-                                                                        <button type="submit" class="btn btn-circle blue">GUARDAR</button>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </form>
-                                                    <!-- END FORM-->
-                                                </div>
-                                            </div>
+                                            </form>
+                                            <!-- END FORM-->
                                         </div>
-
-
-
-
-
-
-
-
-
                                     </div>
                                 </div>
+
+
+
+
+
+
+
+
+
                             </div>
                         </div>
-                        <!-- END PAGE CONTENT-->
                     </div>
                 </div>
-                <!-- END CONTENT -->
-
+                <!-- END PAGE CONTENT-->
             </div>
-            <!-- END CONTAINER -->
-            <!-- BEGIN FOOTER -->
-            <div class="page-footer">
-                <div class="page-footer-inner">
-                    2016 &copy; HelpMex.com.mx
-                </div>
-                <div class="scroll-to-top">
-                    <i class="icon-arrow-up"></i>
-                </div>
-            </div>
+        </div>
+        <!-- END CONTENT -->
 
-            <!-- END JAVASCRIPTS -->
-            <script type="text/javascript">
-                $('#colorSelector').ColorPicker({
-                    color: '#c91e6e',
-                    onShow: function (colpkr) {
-                        $(colpkr).fadeIn(500);
-                        return false;
-                    },
-                    onHide: function (colpkr) {
-                        $(colpkr).fadeOut(500);
-                        return false;
-                    },
-                    onChange: function (hsb, hex, rgb) {
-                        $('#colorSelector div').css('backgroundColor', '#' + hex);
-                        $('#colorNuevo').val('#' + hex);
-                    }
-                });
-            </script>
-            <script>
-                jQuery(document).ready(function() {
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            2016 &copy; HelpMex.com.mx
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+
+    <!-- END JAVASCRIPTS -->
+    <script type="text/javascript">
+        $('#colorSelector').ColorPicker({
+            color: '#c91e6e',
+            onShow: function (colpkr) {
+                $(colpkr).fadeIn(500);
+                return false;
+            },
+            onHide: function (colpkr) {
+                $(colpkr).fadeOut(500);
+                return false;
+            },
+            onChange: function (hsb, hex, rgb) {
+                $('#colorSelector div').css('backgroundColor', '#' + hex);
+                $('#colorNuevo').val('#' + hex);
+            }
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function() {
             // initiate layout and plugins
 
             Layout.init(); // init current layout

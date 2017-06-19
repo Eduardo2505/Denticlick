@@ -59,6 +59,32 @@ class Demo extends CI_Controller {
         $this->load->view('paciente/ficha', $data);
     }
 
+     public function hitorial() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('paciente/historial', $data);
+    }
+
+     public function nuevohitorial() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('paciente/nuevoHistorial', $data);
+    }
+
 
 
 }
