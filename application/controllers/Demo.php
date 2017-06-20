@@ -12,6 +12,10 @@ class Demo extends CI_Controller {
         
     }
 
+    public function close() {
+        redirect('', 'refresh');
+    }
+
     public function index() {
 
         $datam['agenda'] = "start active";

@@ -29,7 +29,7 @@
 
             </li>
             <li class="dropdown dropdown-quick-sidebar-toggler">
-                <a href="<?php echo site_url('') ?>salir/close" class="dropdown-toggle">
+                <a href="<?php echo site_url('') ?>demo/close" class="dropdown-toggle">
                     <i class="icon-logout"></i>
                 </a>
             </li>
