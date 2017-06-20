@@ -94,24 +94,34 @@
                 </li>
 
 
-                <li class="<?php  if(!empty($almacen)) {echo $almacen; }?>">
+                <li class="<?php  if(!empty($inventario)) {echo $inventario; }?>">
                   <a href="javascript:;">
-                    <i class="fa fa-cogs"></i>
-                    <span class="title">Almacen</span>
+                    <i class="fa icon-basket"></i>
+                    <span class="title">Inventario</span>
                     <span class="arrow "></span>
                   </a>
                   <ul class="sub-menu">
 
 
-                    <li class="<?php  if(!empty($al)) {echo $al; }?>" >
-                      <a href="<?php echo site_url('') ?>demo/empresa">
-                        <i class="icon-home"></i>
+                    <li class="<?php  if(!empty($iexitencias)) {echo $iexitencias; }?>" >
+                      <a href="<?php echo site_url('') ?>demo/exitencias">
+                        <i class="icon-tag"></i>
                         Existencias</a>
                       </li>
+                      <li class="<?php  if(!empty($ientradas)) {echo $ientradas; }?>" >
+                      <a href="<?php echo site_url('') ?>demo/entradas">
+                        <i class="fa fa-share"></i>
+                        Entradas</a>
+                      </li>
+                      <li class="<?php  if(!empty($isalidas)) {echo $isalidas; }?>" >
+                      <a href="<?php echo site_url('') ?>demo/salidas">
+                        <i class="fa fa-reply"></i>
+                        Salidas</a>
+                      </li>
 
-                      <li class="<?php  if(!empty($al)) {echo $al; }?>">
-                       <a href="<?php echo site_url('') ?>demo/profesionales">
-                        <i class="fa fa-user"></i>
+                      <li class="<?php  if(!empty($iproducto)) {echo $iproducto; }?>">
+                       <a href="<?php echo site_url('') ?>demo/productos">
+                        <i class="fa icon-handbag"></i>
                         Productos</a>
                       </li>
 
@@ -129,18 +139,13 @@
                     <ul class="sub-menu">
 
 
-                      <li class="<?php  if(!empty($quincenas)) {echo $al; }?>" >
-                        <a href="<?php echo site_url('') ?>demo/empresa">
+                      <li class="<?php  if(!empty($cquincenas)) {echo $cquincenas; }?>" >
+                        <a href="<?php echo site_url('') ?>demo/quincenas">
                           <i class="icon-home"></i>
                           Quincenas</a>
-                        </li>
+                      </li>
 
-                        <li class="<?php  if(!empty($al)) {echo $al; }?>">
-                         <a href="<?php echo site_url('') ?>demo/profesionales">
-                          <i class="fa fa-user"></i>
-                          Edo Gral</a>
-                        </li>
-
+                        
 
 
 
