@@ -176,7 +176,7 @@ class Demo extends CI_Controller {
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
-        $this->load->view('rhistorial/historial', $data);
+        $this->load->view('rHistorial/historial', $data);
     }
     public function rHistorialreporte() {
 
@@ -191,7 +191,7 @@ class Demo extends CI_Controller {
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
-        $this->load->view('rhistorial/reporte', $data);
+        $this->load->view('rHistorial/reporte', $data);
     }
 
     
