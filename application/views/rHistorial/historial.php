@@ -31,7 +31,7 @@
 
                 <!-- END PAGE HEADER-->
                 <h3 class="page-title">
-                    Historial <small>  Clínico de Eduardo Padilla</small>
+                    Historial <small>  Clínico </small>
                 </h3>
                 <!-- BEGIN PAGE CONTENT-->
 
@@ -46,7 +46,7 @@
                                     <div class="input-group">
                                         <div class="input-cont">
 
-                                         <div class="col-md-4">
+                                         <div class="col-md-3">
                                             <select class="form-control">
                                                 <option>Profesional</option>
                                                 <option>Option 2</option>
@@ -55,10 +55,13 @@
                                                 <option>Option 5</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
+                                            <input type="text" name="empleado" class="form-control" placeholder="Paciente .." maxlength="45">
+                                        </div>
+                                        <div class="col-md-3">
                                             <input type="text" name="empleado" class="form-control" placeholder="Palabra Clave .." maxlength="45">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
 
                                             <div class="input-group date-picker input-daterange"  data-date-format="yyyy-mm-dd">
                                                 <input type="text" class="form-control"  name="fecha_de_inspeccion_inicio">
@@ -67,7 +70,7 @@
                                                     <input type="text" class="form-control" name="fecha_de_inspeccion_final">
                                                 </div>
 
-                                                
+
                                             </div>
                                         </div>
 
@@ -77,11 +80,7 @@
                                                 Buscar &nbsp; <i class="m-icon-swapright m-icon-white"></i>
                                             </button>
                                         </span>
-                                        &nbsp;
-                                        <span class="input-group-btn">   
-                                            <a href="<?php echo site_url('') ?>demo/nuevohitorial" class="btn blue">
-                                                <i class="fa fa-times"></i> Nuevo Historial </a>
-                                            </span>
+                                        
 
                                         </div>
                                     </form>
@@ -113,6 +112,7 @@
                                                         <tr>
 
                                                             <th>Observaciones</th>
+                                                            <th>Paciente</th>
                                                             <th>Profesional</th>
                                                             <th>Registro</th>
                                                             <th>Acciones</th>
@@ -125,12 +125,11 @@
                                                       <tr>
 
                                                         <td>Alérgico a medicamento</td>
+                                                        <td>José Eduardo</td>
                                                         <td>Dr. Eduardo Padilla</td>
                                                         <td>2016-05-25 12:00:00 </td>
                                                         <td>
-                                                            <a href="<?php echo site_url('') ?>demo/editarhitorial" title="Ficha" class="btn btn-sm input-circle blue">
-                                                                <i class="fa fa-edit"></i>
-                                                            </a>
+
                                                             <a target="_blank" href="https://www.dropbox.com/s/wqy4gch9x90xnpb/04-01.PDF?dl=0" title="Evolución/Historial" class="btn input-circle btn-sm yellow-crusta">
                                                                 <i class="fa fa-file"></i>
                                                             </a>
@@ -158,6 +157,8 @@
                                         <?php echo $pagination; ?>
 
                                     </div>
+
+
                                 </div>
                                 <div style="text-align: center">
                                     <a href="javascript:;" class="btn btn-lg green">
@@ -166,7 +167,9 @@
                                     <a href="javascript:;" class="btn btn-lg red">
                                         <i class="fa fa-file-pdf-o"></i>
                                     </a>
-                                    
+                                    <a href="<?php echo site_url('') ?>demo/rHistorialreporte" class="btn btn-lg blue">
+                                        <i class="fa fa-database"></i>
+                                    </a>
                                 </div>
 
 

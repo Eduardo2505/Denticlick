@@ -161,7 +161,16 @@
 
                                             </div>
                                         </div>
+                                        
+                                        <div style="text-align: center">
+                                            <a href="javascript:;" class="btn btn-lg green">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </a>
+                                            <a href="javascript:;" class="btn btn-lg red">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </a>
 
+                                        </div>
 
                                     </div>
 
@@ -175,68 +184,68 @@
                                         <div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
 
                                             <div class="modal-body">
-                                               <form class="form-horizontal">
+                                             <form class="form-horizontal">
                                                 <input type="hidden" id="idHistorial">
                                                 <div class="form-body">
                                                   <div class="form-group">
                                                       <label class="col-md-3 control-label">Estado *</label>
                                                       <div class="col-md-6">
 
-                                                       <select class="form-control">
-                                                        <option>Nunguno</option>
-                                                        <option>No confirmado</option>
-                                                        <option>Confirmado</option>
-                                                        <option>Hora cancelada</option>
-                                                        <option>Confirmado por mail</option>
-                                                        <option>Cancelado por mail</option>
-                                                    </select>
+                                                         <select class="form-control">
+                                                            <option>Nunguno</option>
+                                                            <option>No confirmado</option>
+                                                            <option>Confirmado</option>
+                                                            <option>Hora cancelada</option>
+                                                            <option>Confirmado por mail</option>
+                                                            <option>Cancelado por mail</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
 
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-success btn-clean" data-dismiss="modal" id="btnaceptar">GUARDAR</button>
+                                        <button type="button" class="btn btn-danger btn-clean" data-dismiss="modal">CANCELAR</button>
+
+
+
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-
-                                <button type="button" class="btn btn-success btn-clean" data-dismiss="modal" id="btnaceptar">GUARDAR</button>
-                                  <button type="button" class="btn btn-danger btn-clean" data-dismiss="modal">CANCELAR</button>
-
-
-
-                              </div>
-                          </div>
 
 
 
 
 
 
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- END PAGE CONTENT-->
-      </div>
-  </div>
-  <!-- END CONTENT -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+        <!-- END CONTENT -->
 
-</div>
-<!-- END CONTAINER -->
-<!-- BEGIN FOOTER -->
-<div class="page-footer">
-    <div class="page-footer-inner">
-        2016 &copy; HelpMex.com.mx
     </div>
-    <div class="scroll-to-top">
-        <i class="icon-arrow-up"></i>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            2016 &copy; HelpMex.com.mx
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
     </div>
-</div>
 
-<!-- END JAVASCRIPTS -->
-<?php $this->load->view('plantilla/script') ?>
+    <!-- END JAVASCRIPTS -->
+    <?php $this->load->view('plantilla/script') ?>
 
-<script>
-    jQuery(document).ready(function() {
+    <script>
+        jQuery(document).ready(function() {
                 // initiate layout and plugins
 
                 Layout.init(); // init current layout

@@ -31,7 +31,7 @@
 
                 <!-- END PAGE HEADER-->
                 <h3 class="page-title">
-                    Pagos <small> Clínicos de Eduardo Padilla </small>
+                    Empresas <small> </small>
                 </h3>
                 <!-- BEGIN PAGE CONTENT-->
 
@@ -42,40 +42,30 @@
 
                         <div class="row search-form-default">
                             <div class="col-md-12">
-                                <form action="<?php echo site_url('') ?>avaluos/mostrar">
+                                 <form action="<?php echo site_url('') ?>avaluos/mostrar">
                                     <div class="input-group">
                                         <div class="input-cont">
-                                            <div class="col-md-4">
-                                                <input type="text" name="nombre" class="form-control" placeholder="Palabra Clave .." maxlength="45">
+                                            <div class="col-md-12">
+                                                <input type="text" name="nombre" class="form-control" placeholder="Nombre .." maxlength="45">
                                             </div>
                                             
-                                            <div class="col-md-4">
+                                            
+                                        </div>
 
-                                                <div class="input-group date-picker input-daterange"  data-date-format="yyyy/mm/dd">
-                                                    <input type="text" class="form-control"  name="fecha_de_inspeccion_inicio">
-                                                    <span class="input-group-addon">
-                                                        a </span>
-                                                        <input type="text" class="form-control" name="fecha_de_inspeccion_final">
-                                                    </div>
+                                        <span class="input-group-btn">
 
-                                                    
-                                                </div>
-                                            </div>
-
-                                            <span class="input-group-btn">
-
-                                                <button type="submit" class="btn green-haze">
-                                                    Buscar &nbsp; <i class="m-icon-swapright m-icon-white"></i>
-                                                </button>
+                                            <button type="submit" class="btn green-haze">
+                                                Buscar &nbsp; <i class="m-icon-swapright m-icon-white"></i>
+                                            </button>
+                                        </span>
+                                        &nbsp;
+                                        <span class="input-group-btn">   
+                                            <a href="<?php echo site_url('') ?>demo/nuevaempresa" class="btn blue">
+                                                <i class="fa fa-times"></i> Nueva Empresa </a>
                                             </span>
-                                            &nbsp;
-                                            <span class="input-group-btn">   
-                                                <a href="<?php echo site_url('') ?>demo/nuevoPagos" class="btn blue">
-                                                    <i class="fa fa-times"></i> Nuevo Pago </a>
-                                                </span>
 
-                                            </div>
-                                        </form>
+                                        </div>
+                                    </form>
                                     </br>
                                 </div>
                             </div>
@@ -91,7 +81,7 @@
                                         <div class="portlet box blue">
                                             <div class="portlet-title">
                                                 <div class="caption">
-                                                    <i class="fa fa fa-child"></i>SALDO - $80
+                                                    <i class="fa fa fa-child"></i>Lista
                                                 </div>
 
 
@@ -103,10 +93,10 @@
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Fecha</th>
-                                                                <th>Concepto</th>
-                                                                <th>Cargo</th>
-                                                                <th>Abono</th>
+                                                                <th>Nombre</th>
+                                                                <th>Direccion</th>
+                                                                <th>Teléfono</th>
+                                                                
                                                                 <th>Acciones</th>
 
                                                             </tr>
@@ -116,12 +106,12 @@
 
                                                           <tr>
 
-                                                            <td>2016/25/17 </td>
-                                                            <td>Lalo esta activo</td>
-                                                            <td>$100</td>
-                                                            <td>$30</td>
+                                                            <td>Sucursal 1</td>
+                                                            <td>Palma Mz Lt San Andres</td>
+                                                            <td>+52 55 55 03 98</td>
+                                                          
                                                             <td>
-                                                                <a href="<?php echo site_url('') ?>demo/editarPagos" title="Ficha" class="btn btn-sm input-circle blue">
+                                                                <a href="<?php echo site_url('') ?>demo/editarempresa" title="Ficha" class="btn btn-sm input-circle blue">
                                                                     <i class="fa fa-edit"></i>
                                                                 </a>
 
@@ -132,25 +122,7 @@
 
                                                             </td>
                                                         </tr>
-                                                        <tr>
-
-                                                            <td>2016/25/17 </td>
-                                                            <td>Lalo esta activo</td>
-                                                            <td>$98</td>
-                                                            <td>$20 </td>
-                                                            <td>
-                                                                <a href="<?php echo site_url('') ?>demo/editarPagos" title="Ficha" class="btn btn-sm input-circle blue">
-                                                                    <i class="fa fa-edit"></i>
-                                                                </a>
-
-
-                                                                <a href="#" onclick="eliminarH($(this))" title="Desctivar" class="btn input-circle btn-sm red eliminarclass">
-                                                                    <i class="fa fa-times"></i>
-                                                                </a>
-
-                                                            </td>
-
-                                                        </tr>
+                                                       
 
 
 

@@ -145,7 +145,7 @@
                       <div class="portlet box green-meadow calendar">
                         <div class="portlet-title">
                           <div class="caption">
-                          <a href="#" onclick="nuevaCita()" class="btn btn-default btn-sm">
+                            <a href="#" onclick="nuevaCita()" class="btn btn-default btn-sm">
                               <i class="fa fa-pencil"></i> Nueva Cita </a>
 
                             </div>
@@ -189,51 +189,110 @@
             <div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
               <input type="hidden" id="idHistorial">
               <div class="modal-body">
-                <h4 class="modal-title">¿Esta seguro de eliminar el avalúo ?</h4>
+                <form class="form-horizontal">
+                  <div class="form-body">
+                  
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Cliente *</label>
+                      <div class="col-md-8">
+
+                       <input type="text" class="form-control input-circle" name="cliente">
+                     </div>
+                   </div>
+
+                   <div class="form-group">
+                     <label class="control-label col-md-3">Fecha *</label>
+                     <div class="col-md-3">
+                      <div class="input-group input-medium date date-picker" data-date-format="dd-mm-yyyy" data-date-start-date="+0d">
+                        <input type="text" class="form-control" readonly="">
+                        <span class="input-group-btn">
+                          <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+                        </span>
+                      </div>
+                      <!-- /input-group -->
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                   <label class="col-md-3 control-label">Hora *</label>
+                   <div class="col-md-5">
+                    <div class="input-group">
+                      <input type="text" class="form-control timepicker timepicker-24">
+                      <span class="input-group-btn">
+                        <button class="btn default" type="button"><i class="fa fa-clock-o"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Profesional *</label>
+                  <div class="col-md-5">
+
+                   <select class="form-control">
+                    <option>Selecciona</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                  </select>
+                </div>
               </div>
-              <div class="modal-footer">
 
 
-                <button type="button" class="btn btn-success btn-clean" data-dismiss="modal" id="btnaceptar">SI</button>
-                <button type="button" class="btn btn-danger btn-clean" data-dismiss="modal">NO</button>
 
-              </div>
+
+
+
+
+
             </div>
-
-            <!-- END QUICK SIDEBAR -->
-          </div>
-          <!-- END CONTAINER -->
-          <!-- BEGIN FOOTER -->
-          <div class="page-footer">
-            <div class="page-footer-inner">
-             2014 &copy; Metronic by keenthemes.
-           </div>
-           <div class="scroll-to-top">
-            <i class="icon-arrow-up"></i>
-          </div>
+          </form>
         </div>
+        <div class="modal-footer">
 
-        <?php $this->load->view('plantilla/script') ?>
-        <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
-        <script src="<?php echo site_url('') ?>metronic/global/plugins/moment.min.js"></script>
-        <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.js"></script>
-        <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/calendar.js"></script>
-        <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/lang/es.js" type="text/javascript"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
 
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/clockface/js/clockface.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/moment.min.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-        <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
-        <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/components-pickers.js"></script>
-        <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" type="text/javascript"></script>
-        <script>
-          jQuery(document).ready(function() {       
+          <button type="button" class="btn btn-success btn-clean" data-dismiss="modal" id="btnaceptar">SI</button>
+          <button type="button" class="btn btn-danger btn-clean" data-dismiss="modal">NO</button>
+
+        </div>
+      </div>
+
+      <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+      <div class="page-footer-inner">
+       2014 &copy; Metronic by keenthemes.
+     </div>
+     <div class="scroll-to-top">
+      <i class="icon-arrow-up"></i>
+    </div>
+  </div>
+
+  <?php $this->load->view('plantilla/script') ?>
+  <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
+  <script src="<?php echo site_url('') ?>metronic/global/plugins/moment.min.js"></script>
+  <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+  <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/calendar.js"></script>
+  <script src="<?php echo site_url('') ?>metronic/global/plugins/fullcalendar/lang/es.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL PLUGINS -->
+
+  <!-- BEGIN PAGE LEVEL PLUGINS -->
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/clockface/js/clockface.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+  <script type="text/javascript" src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+  <!-- END PAGE LEVEL PLUGINS -->
+  <script src="<?php echo site_url('') ?>metronic/admin/pages/scripts/components-pickers.js"></script>
+  <script src="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" type="text/javascript"></script>
+  <script>
+    jQuery(document).ready(function() {       
    // initiate layout and plugins
    Metronic.init(); // init metronic core components
 Layout.init(); // init current layout

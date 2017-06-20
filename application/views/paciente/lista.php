@@ -46,7 +46,7 @@
                                     <div class="input-group">
                                         <div class="input-cont">
                                             <div class="col-md-4">
-                                            <input type="text" name="nombre" class="form-control" placeholder="Paciente .." maxlength="45">
+                                                <input type="text" name="nombre" class="form-control" placeholder="Paciente .." maxlength="45">
                                             </div>
                                             <div class="col-md-4">
                                                 <select class="form-control">
@@ -133,9 +133,9 @@
                                                                <!--  <a href="javascript:;" title="Presupuestos" class="btn red">
                                                                <i class="fa fa-edit"></i> -->
                                                                <a href="<?php echo site_url('') ?>demo/pagos" title="Pagos" class="btn btn-sm input-circle grey-cascade cicle">
-                                                                   <i class="fa fa-money"></i></a>
+                                                                 <i class="fa fa-money"></i></a>
 
-                                                                   <a href="<?php echo site_url('') ?>demo/citas" title="Citas" class="btn input-circle btn-sm purple-plum">
+                                                                 <a href="<?php echo site_url('') ?>demo/citas" title="Citas" class="btn input-circle btn-sm purple-plum">
                                                                     <i class="fa fa-clock-o"></i></a>
 
                                                                     <a href="#" onclick="eliminarP($(this))"  title="Desctivar" class="btn input-circle btn-sm red">
@@ -160,6 +160,15 @@
                                                 <?php echo $pagination; ?>
 
                                             </div>
+                                        </div>
+                                        <div style="text-align: center">
+                                            <a href="javascript:;" class="btn btn-lg green">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </a>
+                                            <a href="javascript:;" class="btn btn-lg red">
+                                                <i class="fa fa-file-pdf-o"></i>
+                                            </a>
+                                            
                                         </div>
 
 

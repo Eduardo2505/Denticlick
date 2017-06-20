@@ -31,7 +31,7 @@
 
                 <!-- END PAGE HEADER-->
                 <h3 class="page-title">
-                    Historial <small>  Clínico de Eduardo Padilla</small>
+                    Equipo de Reparto <small> Catálogo </small>
                 </h3>
                 <!-- BEGIN PAGE CONTENT-->
 
@@ -45,30 +45,11 @@
                                 <form action="<?php echo site_url('') ?>avaluos/mostrar">
                                     <div class="input-group">
                                         <div class="input-cont">
-
-                                         <div class="col-md-4">
-                                            <select class="form-control">
-                                                <option>Profesional</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                                <option>Option 4</option>
-                                                <option>Option 5</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input type="text" name="empleado" class="form-control" placeholder="Palabra Clave .." maxlength="45">
-                                        </div>
-                                        <div class="col-md-4">
-
-                                            <div class="input-group date-picker input-daterange"  data-date-format="yyyy-mm-dd">
-                                                <input type="text" class="form-control"  name="fecha_de_inspeccion_inicio">
-                                                <span class="input-group-addon">
-                                                    a </span>
-                                                    <input type="text" class="form-control" name="fecha_de_inspeccion_final">
-                                                </div>
-
-                                                
+                                            <div class="col-md-12">
+                                                <input type="text" name="nombre" class="form-control" placeholder="Nombre .." maxlength="45">
                                             </div>
+                                            
+                                            
                                         </div>
 
                                         <span class="input-group-btn">
@@ -79,8 +60,8 @@
                                         </span>
                                         &nbsp;
                                         <span class="input-group-btn">   
-                                            <a href="<?php echo site_url('') ?>demo/nuevohitorial" class="btn blue">
-                                                <i class="fa fa-times"></i> Nuevo Historial </a>
+                                            <a href="<?php echo site_url('') ?>demo/nuevoprofesionales" class="btn blue">
+                                                <i class="fa fa-times"></i> Nuevo Equipo de Reparto </a>
                                             </span>
 
                                         </div>
@@ -100,7 +81,7 @@
                                     <div class="portlet box blue">
                                         <div class="portlet-title">
                                             <div class="caption">
-                                                <i class="fa fa fa-child"></i> Historial
+                                                <i class="fa fa fa-child"></i> Resultados 1
                                             </div>
 
 
@@ -111,9 +92,9 @@
                                                 <table class="table table-hover">
                                                     <thead>
                                                         <tr>
-
-                                                            <th>Observaciones</th>
-                                                            <th>Profesional</th>
+                                                            <th>Nombre</th>
+                                                            <th>Email</th>
+                                                            <th>Télefono</th>
                                                             <th>Registro</th>
                                                             <th>Acciones</th>
 
@@ -123,20 +104,20 @@
 
 
                                                       <tr>
+                                                        <td>Eduardo Padilla</td>
+                                                        <td>eduardo@padilla.com</td>
+                                                        <td>+52 55 55 03 86 25</td>
+                                                        
+                                                        
+                                                        <td>2016-05-25 22:22:00 </td>
 
-                                                        <td>Alérgico a medicamento</td>
-                                                        <td>Dr. Eduardo Padilla</td>
-                                                        <td>2016-05-25 12:00:00 </td>
                                                         <td>
-                                                            <a href="<?php echo site_url('') ?>demo/editarhitorial" title="Ficha" class="btn btn-sm input-circle blue">
+                                                            <a href="<?php echo site_url('') ?>demo/editarprofesionales" title="Ficha" class="btn btn-sm input-circle blue">
                                                                 <i class="fa fa-edit"></i>
                                                             </a>
-                                                            <a target="_blank" href="https://www.dropbox.com/s/wqy4gch9x90xnpb/04-01.PDF?dl=0" title="Evolución/Historial" class="btn input-circle btn-sm yellow-crusta">
-                                                                <i class="fa fa-file"></i>
-                                                            </a>
+                                                            
 
-
-                                                            <a href="#" onclick="eliminarH($(this))" title="Desctivar" class="btn input-circle btn-sm red eliminarclass">
+                                                            <a href="#" onclick="eliminarP($(this))"  title="Desctivar" class="btn input-circle btn-sm red">
                                                                 <i class="fa fa-times"></i>
                                                             </a>
 
@@ -172,7 +153,6 @@
 
                             </div>
 
-
                             <div style="display: none">
                                 <a class="btn default" data-target="#static" data-toggle="modal" id="btnmodal">
                                     View Demo </a>
@@ -192,7 +172,6 @@
 
                                     </div>
                                 </div>
-
 
 
 
@@ -230,7 +209,6 @@
                 QuickSidebar.init(); // init quick sidebar
                 Metronic.init(); // init metronic core components
                 Demo.init(); // init demo features
-                ComponentsPickers.init();
                // UIExtendedModals.init();
 
            });

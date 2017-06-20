@@ -15,32 +15,34 @@ class Demo extends CI_Controller {
     public function index() {
 
         $datam['agenda'] = "start active";
-        $datam['paciente'] = "x";
+
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
+
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('calendario', $data);
     }
     public function pacienteLista() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+
 
         $data['pagination']="-";//Eliminar
-        
+        $datab['usuario']="-";//Eliminar
+
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('paciente/lista', $data);
     }
 
     public function paciente() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
 
+        $datab['usuario']="-";//Eliminar
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
@@ -48,11 +50,11 @@ class Demo extends CI_Controller {
     }
     public function ficha() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
 
+        $datab['usuario']="-";//Eliminar
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
@@ -61,10 +63,10 @@ class Demo extends CI_Controller {
 
     public function hitorial() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
 
         $data['pagination']="-";//Eliminar
         
@@ -74,10 +76,10 @@ class Demo extends CI_Controller {
 
     public function nuevohitorial() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
 
         $data['pagination']="-";//Eliminar
         
@@ -87,11 +89,11 @@ class Demo extends CI_Controller {
 
     public function editarhitorial() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
 
+        $datab['usuario']="-";//Eliminar
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
@@ -99,10 +101,10 @@ class Demo extends CI_Controller {
     }
     public function pagos() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
 
         $data['pagination']="-";//Eliminar
         
@@ -111,10 +113,10 @@ class Demo extends CI_Controller {
     }
     public function nuevoPagos() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
 
         $data['pagination']="-";//Eliminar
         
@@ -123,10 +125,10 @@ class Demo extends CI_Controller {
     }
     public function editarPagos() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
+        $datab['usuario']="-";//Eliminar
 
         $data['pagination']="-";//Eliminar
         
@@ -137,29 +139,219 @@ class Demo extends CI_Controller {
 
     public function citas() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
 
+        $datab['usuario']="-";//Eliminar
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('citas/lista', $data);
     }
 
-     public function nuevaCita() {
+    public function nuevaCita() {
 
-        $datam['agenda'] = "x";
+
         $datam['paciente'] = "start active";
         $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
-        $datab['agendex'] = "x";
 
+        $datab['usuario']="-";//Eliminar
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('citas/registro', $data);
     }
+
+    public function rHistorial() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rhistorial'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+        
+       
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rhistorial/historial', $data);
+    }
+    public function rHistorialreporte() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rhistorial'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rhistorial/reporte', $data);
+    }
+
+    
+    
+    public function rPagos() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rPagos'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rPagos/lista', $data);
+    }
+
+    public function rPagosreporte() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rPagos'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        
+        $datab['usuario']="-";//Eliminar
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rPagos/reporte', $data);
+    }
+    public function rCitas() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rCitas'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rCitas/lista', $data);
+    }
+
+    public function rCitasreporte() {
+
+
+        $datam['reportes'] = "start active";
+        $datam['rCitas'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('rCitas/reporte', $data);
+    }
+
+    public function profesionales() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aprofesionales'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('profesionales/lista', $data);
+    }
+     public function nuevoprofesionales() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aprofesionales'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('profesionales/registro', $data);
+    }
+    public function editarprofesionales() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aprofesionales'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('profesionales/editar', $data);
+    }
+
+     public function empresa() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aempresa'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('empresas/lista', $data);
+    }
+    public function nuevaempresa() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aempresa'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('empresas/registro', $data);
+    }
+    public function editarempresa() {
+
+
+        $datam['admin'] = "start active";
+        $datam['aempresa'] = "active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+
+        $datab['usuario']="-";//Eliminar
+        
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('empresas/editar', $data);
+    }
+
+
 
 
 
