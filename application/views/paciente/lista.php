@@ -46,10 +46,16 @@
                                     <div class="input-group">
                                         <div class="input-cont">
                                             <div class="col-md-4">
-                                                <input type="text" name="nombre" class="form-control" placeholder="Nombre .." maxlength="45">
+                                            <input type="text" name="nombre" class="form-control" placeholder="Paciente .." maxlength="45">
                                             </div>
                                             <div class="col-md-4">
-                                                <input type="text" name="empleado" class="form-control" placeholder="Profesional.." maxlength="45">
+                                                <select class="form-control">
+                                                    <option>Profesional</option>
+                                                    <option>Option 2</option>
+                                                    <option>Option 3</option>
+                                                    <option>Option 4</option>
+                                                    <option>Option 5</option>
+                                                </select>
                                             </div>
                                             <div class="col-md-4">
                                                 <input type="text" name="empleado" class="form-control" placeholder="Palabra Clave .." maxlength="45">
@@ -99,9 +105,9 @@
                                                             <th>Nombre</th>
                                                             <th>Email</th>
                                                             <th>Télefono</th>
-                                                            <th>Observaciones</th>
+                                                            <th>Notas</th>
                                                             <th>Profesional</th>
-                                                             <th>Registro</th>
+                                                            <th>Registro</th>
                                                             <th>Acciones</th>
 
                                                         </tr>
@@ -115,7 +121,7 @@
                                                         <td>+52 55 55 03 86 25</td>
                                                         <td>Alérgico a medicamento</td>
                                                         <td>Dra. Maria José </td>
-                                                         <td>2016-05-25 22:22:00 </td>
+                                                        <td>2016-05-25 22:22:00 </td>
 
                                                         <td>
                                                             <a href="<?php echo site_url('') ?>demo/ficha" title="Ficha" class="btn btn-sm input-circle blue">
@@ -126,13 +132,13 @@
                                                             </a>
                                                                <!--  <a href="javascript:;" title="Presupuestos" class="btn red">
                                                                <i class="fa fa-edit"></i> -->
-                                                               <a href="javascript:;" title="Pagos" class="btn btn-sm input-circle grey-cascade cicle">
-                                                                 <i class="fa fa-money"></i></a>
+                                                               <a href="<?php echo site_url('') ?>demo/pagos" title="Pagos" class="btn btn-sm input-circle grey-cascade cicle">
+                                                                   <i class="fa fa-money"></i></a>
 
-                                                                 <a href="javascript:;" title="Citas" class="btn input-circle btn-sm purple-plum">
+                                                                   <a href="<?php echo site_url('') ?>demo/citas" title="Citas" class="btn input-circle btn-sm purple-plum">
                                                                     <i class="fa fa-clock-o"></i></a>
 
-                                                                    <a href="javascript:;" title="Desctivar" class="btn input-circle btn-sm red">
+                                                                    <a href="#" onclick="eliminarP($(this))"  title="Desctivar" class="btn input-circle btn-sm red">
                                                                         <i class="fa fa-times"></i>
                                                                     </a>
 
@@ -163,48 +169,52 @@
                                         <a class="btn default" data-target="#static" data-toggle="modal" id="btnmodal">
                                             View Demo </a>
                                         </div>
+
+
                                         <div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
-                                            <div class="modal-body"  id="mostrarprivi">
-                                                <p>
-                                                 PRIVILEGIOS
-                                             </p>
-                                         </div>
-                                         <div class="modal-footer">
-                                            <button type="button" data-dismiss="modal" class="btn blue">ACEPTAR</button>
+                                            <input type="hidden" id="idHistorial">
+                                            <div class="modal-body">
+                                                <h4 class="modal-title">¿Esta seguro de eliminar el avalúo ?</h4>
+                                            </div>
+                                            <div class="modal-footer">
 
+
+                                                <button type="button" class="btn btn-success btn-clean" data-dismiss="modal" id="btnaceptar">SI</button>
+                                                <button type="button" class="btn btn-danger btn-clean" data-dismiss="modal">NO</button>
+
+                                            </div>
                                         </div>
+
+
+
+
+
                                     </div>
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
+                        <!-- END PAGE CONTENT-->
                     </div>
-                    <!-- END PAGE CONTENT-->
+                </div>
+                <!-- END CONTENT -->
+
+            </div>
+            <!-- END CONTAINER -->
+            <!-- BEGIN FOOTER -->
+            <div class="page-footer">
+                <div class="page-footer-inner">
+                    2016 &copy; HelpMex.com.mx
+                </div>
+                <div class="scroll-to-top">
+                    <i class="icon-arrow-up"></i>
                 </div>
             </div>
-            <!-- END CONTENT -->
 
-        </div>
-        <!-- END CONTAINER -->
-        <!-- BEGIN FOOTER -->
-        <div class="page-footer">
-            <div class="page-footer-inner">
-                2016 &copy; HelpMex.com.mx
-            </div>
-            <div class="scroll-to-top">
-                <i class="icon-arrow-up"></i>
-            </div>
-        </div>
+            <!-- END JAVASCRIPTS -->
+            <?php $this->load->view('plantilla/script') ?>
 
-        <!-- END JAVASCRIPTS -->
-        <?php $this->load->view('plantilla/script') ?>
-
-        <script>
-            jQuery(document).ready(function() {
+            <script>
+                jQuery(document).ready(function() {
                 // initiate layout and plugins
 
                 Layout.init(); // init current layout

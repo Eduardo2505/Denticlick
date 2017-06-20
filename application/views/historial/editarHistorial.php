@@ -31,7 +31,7 @@
 
                 <!-- END PAGE HEADER-->
                 <h3 class="page-title">
-                    Historial <small> Historial clínico</small>
+                    Historial <small>  Clínico de Eduardo Padilla</small>
                 </h3>
                 <!-- BEGIN PAGE CONTENT-->
 
@@ -49,14 +49,24 @@
                             <div class="portlet box blue">
                                 <div class="portlet-title">
                                     <div class="caption">
-                                        <i class="fa fa-gift"></i>REGISTRO
+                                        <i class="fa fa-gift"></i>EDITAR
                                     </div>
 
                                 </div>
                                 <div class="portlet-body form">
                                     <!-- BEGIN FORM-->
-                                    <form action="<?php echo site_url('') ?>empleado/registro" method="POST"   class="form-horizontal">
+                                    <form action="cargar_archivo" method="post" enctype="multipart/form-data" class="form-horizontal">
                                         <div class="form-body">
+
+                                       
+
+                                         <div class="form-group">
+                                                <label class="col-md-3 control-label">Archivo *</label>
+                                                <div class="col-md-8">
+
+                                                   <input type="file" class="form-control input-circle" name="mi_archivo">
+                                                </div>
+                                            </div>
 
                                             
                                             <div class="form-group">

@@ -46,7 +46,7 @@ class Demo extends CI_Controller {
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
         $this->load->view('paciente/paciente', $data);
     }
-      public function ficha() {
+    public function ficha() {
 
         $datam['agenda'] = "x";
         $datam['paciente'] = "start active";
@@ -59,7 +59,7 @@ class Demo extends CI_Controller {
         $this->load->view('paciente/ficha', $data);
     }
 
-     public function hitorial() {
+    public function hitorial() {
 
         $datam['agenda'] = "x";
         $datam['paciente'] = "start active";
@@ -69,10 +69,10 @@ class Demo extends CI_Controller {
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
-        $this->load->view('paciente/historial', $data);
+        $this->load->view('historial/historial', $data);
     }
 
-     public function nuevohitorial() {
+    public function nuevohitorial() {
 
         $datam['agenda'] = "x";
         $datam['paciente'] = "start active";
@@ -82,7 +82,83 @@ class Demo extends CI_Controller {
         $data['pagination']="-";//Eliminar
         
         $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
-        $this->load->view('paciente/nuevoHistorial', $data);
+        $this->load->view('historial/nuevoHistorial', $data);
+    }
+
+    public function editarhitorial() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('historial/editarHistorial', $data);
+    }
+    public function pagos() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('pagos/lista', $data);
+    }
+    public function nuevoPagos() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('pagos/registro', $data);
+    }
+    public function editarPagos() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('pagos/editar', $data);
+    }
+
+
+    public function citas() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('citas/lista', $data);
+    }
+
+     public function nuevaCita() {
+
+        $datam['agenda'] = "x";
+        $datam['paciente'] = "start active";
+        $data['menu'] = $this->load->view('plantilla/menu', $datam, true);
+        $datab['agendex'] = "x";
+
+        $data['pagination']="-";//Eliminar
+        
+        $data['barra'] = $this->load->view('plantilla/barra', $datab, true);
+        $this->load->view('citas/registro', $data);
     }
 
 

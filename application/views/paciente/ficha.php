@@ -5,6 +5,10 @@
 <!-- BEGIN HEAD -->
 <head>
   <?php $this->load->view('plantilla/head') ?>
+  <!-- BEGIN PAGE LEVEL STYLES -->
+  <link href="<?php echo site_url('') ?>metronic/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo site_url('') ?>metronic/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo site_url('') ?>metronic/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body class="page-header-fixed page-quick-sidebar-over-content  page-container-bg-solid">
